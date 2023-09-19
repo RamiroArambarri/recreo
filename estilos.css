@@ -1,0 +1,199 @@
+body {
+	background-image: url(imagenes/fondo.jpg);
+	background-size: cover;
+	font-family: calibri;
+}
+
+#contenedor {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1000px;
+	padding: 1px;
+	background: white;
+	border: solid white .5em;
+}
+
+p {
+	margin: .5em 0;
+}
+
+header {
+	background: pink;
+	text-align: center;
+	margin: .5em;
+	padding: 1px;
+}
+
+
+#separador {
+	display: flex;
+	padding: 1px;
+}
+
+nav, main, aside {
+	background: pink;
+	margin: .5em;
+	padding: 1em;
+}
+
+aside {
+	flex-shrink: 1.5;
+}
+
+main {
+	min-width: 50%;
+}
+
+nav *{
+	list-style: none;
+	padding-left: 0;
+}
+
+nav ul{
+	list-style: none;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+nav a {
+	display: inline-block;
+	border: solid white .2em;
+	padding: .2em;
+	margin: .2em;
+	transition: .05s;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+fieldset {
+	margin: 1em;
+	border: solid white 1em;
+}
+
+
+input, button {
+	display: block;
+	border: solid white .2em;
+	padding: .2em;
+	margin: .3em auto;
+	width: 5em;
+	background-color: lightGray;
+	transition: .05s;
+}
+
+input:hover, button:hover, nav a:hover, .botonimagen:hover {
+	scale: 1.1;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: orange;
+}
+
+.botonimagen {
+	border: solid white 0.5em;
+	height: 3.5em;
+	width: 3.5em;
+	transition: .05s;
+}
+
+nav a:active, .botonimagen:active {
+	border-color:orange;
+}
+
+#sentencia {
+	display: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#feedback {
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	right: 200px;
+	padding: 0 .5em 0 .5em;
+	border: solid white 1em;
+}
+
+#botonfiesta {
+	position: fixed;
+	top: 30px;
+	right: 15%;
+	padding: 0 .5em 0 .5em;
+}
+
+#botonera {
+	display: flex;
+	justify-content: center;
+}
+
+/* Para el juego de los naipes */
+#naipe {
+	display: block;
+	margin:0 auto;
+	width:30%;
+}
+
+#interfaz, #botonapuesta, #botonapuesta, #botoncontinuerojo, #botoncontinue {
+	display: none;
+}
+
+#interfaz {
+	padding: 1em;
+}
+
+
+/* Para el juego de los dados */
+
+#botonreroll, #botonroll, #botonconteo {
+	display: none;
+}
+
+.dado, .dadoactivo {
+	border: solid white 0.3em;
+	width: 3em;
+	margin: 0.3em;
+}
+
+.dadoactivo:hover {
+	scale: 1.1;
+	cursor: pointer;
+}
+
+#contenedor-dados {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 10em;
+	margin: 0 auto;
+}
+
+
+#botonera * {
+	margin: 0.2em 0.3em;
+}
+
+
+/* Para la página de chistes */
+
+article {
+	border: solid white .5em;
+	margin:.5em auto;
+	padding: 1em;
+}
+
+
+/* Para la página sobre el creador */
+
+#foto {
+	width: 20%;
+	border: solid white 1em;
+	float: right;
+}

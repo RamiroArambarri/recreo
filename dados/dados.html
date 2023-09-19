@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dados</title>
+	<link rel="stylesheet" type="text/css" href="../estilos.css">
+	<script src="../cambiocolor.js"></script>
+	<script src="../funciones.js"></script>
+	<script src="dados.js"></script>
+</head>
+<body>
+	<div id="contenedor">
+	<header class="fiesta">
+		<h1>¡Dados!</h1>	
+	</header>
+	<div id="separador">
+		<nav class="fiesta">
+			<ul>
+				<li><a class="fiesta" href="../index.html">Principal</a></li>
+				<li>Juegos:
+					<ul>
+						<li><a class="fiesta" href="../naipes/naipes.html">Naipes</a></li>
+						<li><a class="fiesta" href="#">Dados</a></li>	
+				</ul></li>
+			</ul>
+			<ul>
+				<li><a class="fiesta" href="../chistes.html">Chistes</a></li>
+				<li><a class="fiesta" href="../sobre-nosotros.html">Créditos</a></li>
+			</ul>
+		</nav>
+		<main class="fiesta">
+			<div id="contenedor-dados">
+				<img id="dado1" class="dado" onclick="cambiarSelecDado(0)" alt="dado" src="imagenes/dadoicono.jpg">
+				<img id="dado2" class="dado" onclick="cambiarSelecDado(1)" src="imagenes/dadoicono.jpg" alt="dado">
+				<img id="dado3" class="dado" onclick="cambiarSelecDado(2)" alt="dado" src="imagenes/dadoicono.jpg">
+				<img id="dado4" class="dado" onclick="cambiarSelecDado(3)" alt="dado" src="imagenes/dadoicono.jpg">
+				<img id="dado5" class="dado" onclick="cambiarSelecDado(4)" alt="dado" src="imagenes/dadoicono.jpg">
+				<img id="dado6" class="dado" onclick="cambiarSelecDado(5)" alt="dado" src="imagenes/dadoicono.jpg">
+				<p id="sentencia"></p>
+			</div>
+			<div id="botonera">
+				<button id="botoninicio" onclick="iniciar();">Iniciar</button>
+				<button id="botonreroll" onclick="roll();">Volver a tirar</button>
+				<button id="botonconteo" onclick="conteo();">Contar los puntos</button>
+				<button id="botonroll" onclick="siguienteRonda();">Siguiente ronda</button>
+			</div>
+		</main>
+		<aside class="fiesta">
+			<p>Reglas del juego
+				<br>
+				Cada "3" suma 1 punto. Cada "6" suma 2 punto. Cada "1" resta 1 punto. <br>
+				En cada ronda, empiezas tirando los 6 dados. Luego, puedes seleccionar que dados quieres volver a tirar para mejorar los números. Puedes hacer esto las veces que quieras, pero a partir de la segunda tirada de la ronda, cada tirada restará 1 punto al puntaje de dicha ronda. Cuando estés satisfecho con tus dados, cuentas los puntos y pasas a la siguiente ronda.<br>
+				Tu objetivo es llegar a 40 puntos, pero tienes solo 10 rondas antes de que el juego termine ¡Buena suerte!
+			</p>
+		</aside>
+	</div>
+</div>
+<div id="feedback" class="fiesta">
+	<p id="puntaje">Puntaje actual: 0 puntos.</p>
+	<p id="num-ronda">Ronda actual: 1.</p>
+	<p id="num-tiro">Tiros en esta ronda: 1.</p>
+</div>
+<button class="fiesta" id="botonfiesta" onclick="cambioColor();">Cambiar<br>colores</button>
+<script>cambioColor();</script>
+</body>
+</html>
